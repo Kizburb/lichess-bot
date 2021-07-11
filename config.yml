@@ -1,5 +1,5 @@
-token: "Sw9Rs7YdAOajrpcB"    # Lichess OAuth2 Token.
-url: "https://lichess.org/"  # Lichess base URL.
+token: "Sw9Rs7YdAOajrpcB"    # Lichess OAuth2 Token
+url: "https://lichess.org/"  # Lichess base URL
 
 engine:                      # Engine settings.
   dir: "./"                  # Directory containing engines, relative to this project.
