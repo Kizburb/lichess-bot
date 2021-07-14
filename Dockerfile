@@ -15,11 +15,9 @@ RUN wget --no-check-certificate "https://gitlab.com/OIVAS7572/Goi5.1.bin/-/raw/m
 RUN 7z e Goi5.1.bin.7z
 RUN rm Goi5.1.bin.7z
 
-RUN wget --no-check-certificate "https://abrok.eu/stockfish/builds/8fc297c50647317185d4c41b3443a0e686412681/linux64modern/stockfish_21070310_x64_modern.zip" -O stockfishmodern.zip
+RUN wget --no-check-certificate "https://github.com/ianfab/Fairy-Stockfish/releases/download/fairy_sf_13_1/fairy-stockfish_x86-64-bmi2" -O stockfishmodern
 #RUN wget --no-check-certificate "https://tests.stockfishchess.org/api/nn/nn-9e3c6298299a.nnue" -O nn-9e3c6298299a.nnue
-RUN 7z e stockfishmodern.zip
-RUN rm stockfishmodern.zip
-RUN mv stockfish_21070310_x64_modern stockfishmodern
+RUN mv fairy-stockfish_x86-64-bmi2 stockfishmodern
 
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
