@@ -17,7 +17,7 @@ RUN rm Goi5.1.bin.7z
 
 RUN wget --no-check-certificate "https://github.com/ianfab/Fairy-Stockfish/releases/download/fairy_sf_13_1/fairy-stockfish_x86-64-bmi2" -O stockfishmodern
 #RUN wget --no-check-certificate "https://tests.stockfishchess.org/api/nn/nn-9e3c6298299a.nnue" -O nn-9e3c6298299a.nnue
-RUN mv fairy-stockfish_x86-64-bmi2 stockfishmodern
+RUN mv stockfishmodern stockfishmodern
 
 COPY requirements.txt .
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
